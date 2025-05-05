@@ -1,0 +1,150 @@
+@model List<CoinVista.Models.Investment>
+@{
+    ViewData["Title"] = "Dashboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var totalInv     = (decimal)ViewBag.TotalInvested;
+    var totalCur     = (decimal)ViewBag.TotalCurrent;
+    var pct          = (decimal)ViewBag.ProfitLossPct;
+    var trendDates   = (List<string>)ViewBag.TrendDates;
+    var trendPrices  = (List<decimal>)ViewBag.TrendPrices;
+    var allocLabels  = (List<string>)ViewBag.AllocationLabels;
+    var allocValues  = (List<decimal>)ViewBag.AllocationData;
+    var plLabels     = (List<string>)ViewBag.PLLabels;
+    var plData       = (List<decimal>)ViewBag.PLData;
+    var multiSets    = (dynamic)ViewBag.MultiLineDatasets;
+}
+
+<h2>Dashboard</h2>
+
+<div class="row mb-4">
+  <div class="col-md-4">
+    <div class="card p-3 hover-shadow">
+      <h5>Total Invested</h5>
+      <h3>@totalInv.ToString("C")</h3>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card p-3 hover-shadow">
+      <h5>Current Value</h5>
+      <h3>@totalCur.ToString("C")</h3>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card p-3 hover-shadow">
+      <h5>Profit / Loss %</h5>
+      <h3 style="color:@(pct >= 0 ? "lightgreen" : "red")">
+        @pct.ToString("N2")%
+      </h3>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="card p-3 mb-4 hover-shadow">
+      <h5>Portfolio Allocation (%)</h5>
+      <canvas id="allocationChart"></canvas>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card p-3 mb-4 hover-shadow">
+      <h5>7-Day Daily P/L (%)</h5>
+      <canvas id="plBarChart"></canvas>
+    </div>
+  </div>
+</div>
+
+<div class="card p-3 mb-4 hover-shadow">
+  <h5>Coin Trend Comparison (7-Day %)</h5>
+  <canvas id="multiLineChart"></canvas>
+</div>
+
+@section Scripts {
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const formatPct = val => `${val.toFixed(2)}%`;
+
+    // Allocation Pie
+    new Chart(document.getElementById('allocationChart'), {
+      type: 'pie',
+      data: {
+        labels: @Html.Raw(Json.Serialize(allocLabels)),
+        datasets: [{
+          data: @Html.Raw(Json.Serialize(allocValues)),
+          backgroundColor: ['#36A2EB', '#FF6384', '#FFCE56', '#4BC0C0', '#9966FF'],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        plugins: {
+          legend: { position: 'bottom' },
+          tooltip: {
+            callbacks: {
+              label: (ctx) => `${ctx.label}: ${formatPct(ctx.raw)}`
+            }
+          }
+        }
+      }
+    });
+
+    // Daily P/L Bar
+    new Chart(document.getElementById('plBarChart'), {
+      type: 'bar',
+      data: {
+        labels: @Html.Raw(Json.Serialize(plLabels)),
+        datasets: [{
+          label: 'Daily P/L %',
+          data: @Html.Raw(Json.Serialize(plData)),
+          backgroundColor: @Html.Raw(Json.Serialize(plData.Select(x => x >= 0 ? "rgba(0, 200, 0, 0.6)" : "rgba(255, 0, 0, 0.6)").ToList())),
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              callback: value => formatPct(value)
+            }
+          }
+        },
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: ctx => `${ctx.dataset.label}: ${formatPct(ctx.raw)}`
+            }
+          }
+        }
+      }
+    });
+
+    // Multi-Line Coin Trend
+    new Chart(document.getElementById('multiLineChart'), {
+      type: 'line',
+      data: {
+        labels: @Html.Raw(Json.Serialize(trendDates)),
+        datasets: @Html.Raw(Json.Serialize(multiSets))
+      },
+      options: {
+        interaction: { mode: 'nearest', axis: 'x' },
+        plugins: {
+          legend: { position: 'bottom' },
+          tooltip: {
+            callbacks: {
+              label: ctx => `${ctx.dataset.label}: ${formatPct(ctx.raw)}`
+            }
+          }
+        },
+        scales: {
+          y: {
+            ticks: {
+              callback: value => formatPct(value)
+            }
+          }
+        }
+      }
+    });
+  </script>
+}

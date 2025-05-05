@@ -1,8 +1,57 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Welcome to CoinVista";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var isLoggedIn = Context.Session.GetString("UserEmail") != null;
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<!-- Hero Section -->
+<div class="text-center" style="padding: 100px 20px; background-image: url('/img/bg-hero.jpg'); background-size: cover; background-position: center; color: white;">
+    <h1 class="display-4 fw-bold">Track Your Crypto Smartly</h1>
+    <p class="lead">Manage your crypto investments. Visualize. Analyze. Succeed.</p>
+    <a class="btn btn-outline-light btn-lg mt-3 shadow" href="@(
+        isLoggedIn ? Url.Action("Index", "Investment") : Url.Action("Login", "Account")
+    )" style="border-radius: 25px; padding: 10px 30px;">
+        Get Started
+    </a>
+</div>
+
+
+<!-- Features Section -->
+<div class="container py-5">
+    <h2 class="text-center mb-4">Why CoinVista?</h2>
+    <div class="row text-center">
+        <div class="col-md-4">
+            <i class="bi bi-bar-chart-line display-4 text-primary"></i>
+            <h5 class="mt-3">Real-Time Dashboard</h5>
+            <p>Get instant insights on your portfolio’s performance using beautiful charts and trends.</p>
+        </div>
+        <div class="col-md-4">
+            <i class="bi bi-graph-up-arrow display-4 text-success"></i>
+            <h5 class="mt-3">7-Day Price Analysis</h5>
+            <p>Visualize weekly growth and volatility for each coin in your investment list.</p>
+        </div>
+        <div class="col-md-4">
+            <i class="bi bi-shield-check display-4 text-info"></i>
+            <h5 class="mt-3">Private & Secure</h5>
+            <p>Your data stays local and safe. No accounts, no tracking, full control.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Chart Preview Section -->
+<div class="bg-dark text-white py-5">
+    <div class="container text-center">
+        <h2>Preview the Power of Analytics</h2>
+        <p class="lead">A glimpse into how your portfolio is visualized.</p>
+        <img src="~/img/Dashboard.png" alt="Dashboard Preview" class="img-fluid rounded shadow mt-3" style="max-height:400px;" />
+    </div>
+</div>
+
+
+<!-- Call to Action -->
+<div style="background: linear-gradient(135deg, #0f2027, #0f2027, #0f2027); color: white; text-align: center; padding: 60px 20px;">
+    <h3 style="font-size: 2rem; font-weight: 500;">Start tracking your crypto smarter, today.</h3>
+    <a class="btn btn-outline-light btn-lg mt-3 shadow" href="@(
+        isLoggedIn ? Url.Action("Index", "Investment") : Url.Action("Register", "Account")
+    )" style="border-radius: 25px; padding: 10px 30px;">Join Now</a>
 </div>

@@ -8,19 +8,19 @@
     "net9.0": []
   },
   "packageFolders": {
-    "/Users/swethasingireddy/.nuget/packages/": {}
+    "C:\\Users\\karth\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/swethasingireddy/Desktop/Subject/AppDev/CoinVista/CoinVista/CoinVista.csproj",
+      "projectUniqueName": "C:\\Users\\karth\\Desktop\\CoinVista\\CoinVista\\CoinVista.csproj",
       "projectName": "CoinVista",
-      "projectPath": "/Users/swethasingireddy/Desktop/Subject/AppDev/CoinVista/CoinVista/CoinVista.csproj",
-      "packagesPath": "/Users/swethasingireddy/.nuget/packages/",
-      "outputPath": "/Users/swethasingireddy/Desktop/Subject/AppDev/CoinVista/CoinVista/obj/",
+      "projectPath": "C:\\Users\\karth\\Desktop\\CoinVista\\CoinVista\\CoinVista.csproj",
+      "packagesPath": "C:\\Users\\karth\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\karth\\Desktop\\CoinVista\\CoinVista\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/swethasingireddy/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\karth\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
@@ -68,7 +68,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

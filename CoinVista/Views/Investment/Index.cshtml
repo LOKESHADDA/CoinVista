@@ -1,0 +1,39 @@
+@model List<CoinVista.Models.Investment>
+@{
+    ViewData["Title"] = "My Investments";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>My Investments</h2>
+<p><a asp-action="Create" class="btn btn-primary">Add New</a></p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Crypto</th>
+            <th>Amount Invested</th>
+            <th>Quantity</th>
+            <th>Purchase Price</th>
+            <th>Date</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach(var inv in Model) {
+        <tr>
+            <td>@inv.CryptoName</td>
+            <td>@inv.AmountInvested.ToString("C")</td>
+            <td>@inv.Quantity</td>
+            <td>@inv.PurchasePrice.ToString("C")</td>
+            <td>@inv.InvestmentDate.ToShortDateString()</td>
+            
+            <td>
+                <a asp-action="Edit" asp-route-id="@inv.Id" class="btn btn-sm btn-warning">Edit</a>
+                <a asp-action="Delete" asp-route-id="@inv.Id" class="btn btn-sm btn-danger">Delete</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+

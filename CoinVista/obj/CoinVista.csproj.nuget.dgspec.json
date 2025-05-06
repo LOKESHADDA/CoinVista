@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\karth\\Desktop\\CoinVista\\CoinVista\\CoinVista.csproj": {}
+    "/Users/lokeshadda/Documents/CourseWork/AppDev/Project/CoinVista/CoinVista/CoinVista.csproj": {}
   },
   "projects": {
-    "C:\\Users\\karth\\Desktop\\CoinVista\\CoinVista\\CoinVista.csproj": {
+    "/Users/lokeshadda/Documents/CourseWork/AppDev/Project/CoinVista/CoinVista/CoinVista.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\karth\\Desktop\\CoinVista\\CoinVista\\CoinVista.csproj",
+        "projectUniqueName": "/Users/lokeshadda/Documents/CourseWork/AppDev/Project/CoinVista/CoinVista/CoinVista.csproj",
         "projectName": "CoinVista",
-        "projectPath": "C:\\Users\\karth\\Desktop\\CoinVista\\CoinVista\\CoinVista.csproj",
-        "packagesPath": "C:\\Users\\karth\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\karth\\Desktop\\CoinVista\\CoinVista\\obj\\",
+        "projectPath": "/Users/lokeshadda/Documents/CourseWork/AppDev/Project/CoinVista/CoinVista/CoinVista.csproj",
+        "packagesPath": "/Users/lokeshadda/.nuget/packages/",
+        "outputPath": "/Users/lokeshadda/Documents/CourseWork/AppDev/Project/CoinVista/CoinVista/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\karth\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/lokeshadda/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -36,13 +36,45 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
+          "auditMode": "all"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Session": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "System.Security.Cryptography.Xml": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "System.Text.Encodings.Web": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -62,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

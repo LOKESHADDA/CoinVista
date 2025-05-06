@@ -1,29 +1,36 @@
+using CoinVista.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// MVC & Razor
 builder.Services.AddControllersWithViews();
+
+// CoinGecko HTTP Client
+builder.Services.AddHttpClient<CoinGeckoService>();
+
+// Services
+builder.Services.AddSingleton<InvestmentService>();  // In-memory investment store
+builder.Services.AddSingleton<UserService>();        // JSON-based user persistence
+builder.Services.AddSingleton<CoinHistoryCacheService>();
+
+// Session
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true;
+});
+builder.Services.AddHttpContextAccessor();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
-{
-    app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
-}
-
-app.UseHttpsRedirection();
+// Middleware pipeline
+app.UseStaticFiles();
 app.UseRouting();
-
-app.UseAuthorization();
-
-app.MapStaticAssets();
+app.UseSession();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}")
-    .WithStaticAssets();
-
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();

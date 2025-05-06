@@ -1,0 +1,132 @@
+[
+  {
+    "Id": 1,
+    "Email": "abcde@gmail.com",
+    "CryptoId": "bitcoin",
+    "CryptoName": "Bitcoin",
+    "AmountInvested": 1000.00,
+    "Quantity": 0.0106273313708194735220038896,
+    "PurchasePrice": 94097,
+    "InvestmentDate": "2025-05-05T10:21:31.316124-04:00"
+  },
+  {
+    "Id": 2,
+    "Email": "abcde@gmail.com",
+    "CryptoId": "ethereum",
+    "CryptoName": "Ethereum",
+    "AmountInvested": 2000,
+    "Quantity": 1.1082358547546088758609607297,
+    "PurchasePrice": 1804.67,
+    "InvestmentDate": "2025-05-05T10:21:38.338621-04:00"
+  },
+  {
+    "Id": 3,
+    "Email": "abcde@gmail.com",
+    "CryptoId": "ripple",
+    "CryptoName": "XRP",
+    "AmountInvested": 10000,
+    "Quantity": 4672.8971962616822429906542056,
+    "PurchasePrice": 2.14,
+    "InvestmentDate": "2025-05-05T10:21:46.516594-04:00"
+  },
+  {
+    "Id": 4,
+    "Email": "abcde@gmail.com",
+    "CryptoId": "usd-coin",
+    "CryptoName": "USDC",
+    "AmountInvested": 2000,
+    "Quantity": 2000.1920184337696418856210196,
+    "PurchasePrice": 0.999904,
+    "InvestmentDate": "2025-05-05T10:22:02.864904-04:00"
+  },
+  {
+    "Id": 5,
+    "Email": "abcde@gmail.com",
+    "CryptoId": "dogecoin",
+    "CryptoName": "Dogecoin",
+    "AmountInvested": 2000,
+    "Quantity": 11726.835103108197644078827786,
+    "PurchasePrice": 0.170549,
+    "InvestmentDate": "2025-05-05T10:22:11.359797-04:00"
+  },
+  {
+    "Id": 6,
+    "Email": "abcde@gmail.com",
+    "CryptoId": "ethena-usde",
+    "CryptoName": "Ethena USDe",
+    "AmountInvested": 5000,
+    "Quantity": 5000,
+    "PurchasePrice": 1.0,
+    "InvestmentDate": "2025-05-05T10:22:26.061074-04:00"
+  },
+  {
+    "Id": 7,
+    "Email": "abcde@gmail.com",
+    "CryptoId": "ethereum",
+    "CryptoName": "Ethereum",
+    "AmountInvested": 10000,
+    "Quantity": 5.5567903978661924872193820849,
+    "PurchasePrice": 1799.6,
+    "InvestmentDate": "2025-05-05T11:55:30.220654-04:00"
+  },
+  {
+    "Id": 8,
+    "Email": "abcde@gmail.com",
+    "CryptoId": "ethereum",
+    "CryptoName": "Ethereum",
+    "AmountInvested": 10000,
+    "Quantity": 5.5583038280038463462489786617,
+    "PurchasePrice": 1799.11,
+    "InvestmentDate": "2025-05-05T11:55:33.250186-04:00"
+  },
+  {
+    "Id": 9,
+    "Email": "av@gmail.com",
+    "CryptoId": "ethereum",
+    "CryptoName": "Ethereum",
+    "AmountInvested": 10000,
+    "Quantity": 5.5122537400641626335343468531,
+    "PurchasePrice": 1814.14,
+    "InvestmentDate": "2025-05-05T13:47:30.140477-04:00"
+  },
+  {
+    "Id": 10,
+    "Email": "av@gmail.com",
+    "CryptoId": "tron",
+    "CryptoName": "TRON",
+    "AmountInvested": 2000,
+    "Quantity": 8034.516281947245366092734387,
+    "PurchasePrice": 0.248926,
+    "InvestmentDate": "2025-05-05T13:47:38.144478-04:00"
+  },
+  {
+    "Id": 11,
+    "Email": "av@gmail.com",
+    "CryptoId": "leo-token",
+    "CryptoName": "LEO Token",
+    "AmountInvested": 10000,
+    "Quantity": 1157.4074074074074074074074074,
+    "PurchasePrice": 8.64,
+    "InvestmentDate": "2025-05-05T13:47:45.877692-04:00"
+  },
+  {
+    "Id": 13,
+    "Email": "avslokesh7326@gmail.com",
+    "CryptoId": "tether",
+    "CryptoName": "Tether",
+    "AmountInvested": 1000,
+    "Quantity": 1000.0790062414930779531582995,
+    "PurchasePrice": 0.999921,
+    "InvestmentDate": "2025-05-05T17:29:33.302341-04:00"
+  },
+  {
+    "Id": 14,
+    "Email": "avslokesh7326@gmail.com",
+    "CryptoId": "cardano",
+    "CryptoName": "Cardano",
+    "AmountInvested": 2500,
+    "Quantity": 3772.3549755853185980118180337,
+    "PurchasePrice": 0.662716,
+    "InvestmentDate": "2025-05-05T17:29:43.217745-04:00"
+  }
+]

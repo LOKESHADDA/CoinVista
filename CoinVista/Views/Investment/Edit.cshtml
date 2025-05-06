@@ -1,0 +1,26 @@
+@model CoinVista.Models.Investment
+@{
+    ViewData["Title"] = "Edit Investment";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit Investment</h2>
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label asp-for="CryptoId">Cryptocurrency</label>
+        <select asp-for="CryptoId" class="form-control" asp-items="ViewBag.CoinOptions"></select>
+        <span asp-validation-for="CryptoId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="AmountInvested">Amount Invested (USD)</label>
+        <input asp-for="AmountInvested" class="form-control" />
+        <span asp-validation-for="AmountInvested" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

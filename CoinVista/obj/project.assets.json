@@ -3825,19 +3825,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/lokeshadda/.nuget/packages/": {}
+    "C:\\Users\\karth\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/lokeshadda/Documents/CourseWork/AppDev/Project/CoinVista/CoinVista/CoinVista.csproj",
+      "projectUniqueName": "C:\\Users\\karth\\Downloads\\New folder\\CoinVista\\CoinVista\\CoinVista.csproj",
       "projectName": "CoinVista",
-      "projectPath": "/Users/lokeshadda/Documents/CourseWork/AppDev/Project/CoinVista/CoinVista/CoinVista.csproj",
-      "packagesPath": "/Users/lokeshadda/.nuget/packages/",
-      "outputPath": "/Users/lokeshadda/Documents/CourseWork/AppDev/Project/CoinVista/CoinVista/obj/",
+      "projectPath": "C:\\Users\\karth\\Downloads\\New folder\\CoinVista\\CoinVista\\CoinVista.csproj",
+      "packagesPath": "C:\\Users\\karth\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\karth\\Downloads\\New folder\\CoinVista\\CoinVista\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/lokeshadda/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\karth\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
@@ -3859,9 +3859,9 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "all"
+        "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net9.0": {
@@ -3917,31 +3917,11 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   },
   "logs": [
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'System.Formats.Asn1' 6.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-447r-wph3-92pm",
-      "libraryId": "System.Formats.Asn1",
-      "targetGraphs": [
-        "net9.0"
-      ]
-    },
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'System.Security.Cryptography.Pkcs' 6.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-555c-2p6r-68mm",
-      "libraryId": "System.Security.Cryptography.Pkcs",
-      "targetGraphs": [
-        "net9.0"
-      ]
-    },
     {
       "code": "NU1902",
       "level": "Warning",

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CoinVista")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c87e58ccb8183a953e85dba312f79ea237c9de69")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9f608ac22422d3241dd69c05bd30e7979c19c5d0")]
 [assembly: System.Reflection.AssemblyProductAttribute("CoinVista")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CoinVista")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

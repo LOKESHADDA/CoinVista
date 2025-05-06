@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/lokeshadda/Documents/CourseWork/AppDev/Project/CoinVista/CoinVista/CoinVista.csproj": {}
+    "C:\\Users\\karth\\Downloads\\New folder\\CoinVista\\CoinVista\\CoinVista.csproj": {}
   },
   "projects": {
-    "/Users/lokeshadda/Documents/CourseWork/AppDev/Project/CoinVista/CoinVista/CoinVista.csproj": {
+    "C:\\Users\\karth\\Downloads\\New folder\\CoinVista\\CoinVista\\CoinVista.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/lokeshadda/Documents/CourseWork/AppDev/Project/CoinVista/CoinVista/CoinVista.csproj",
+        "projectUniqueName": "C:\\Users\\karth\\Downloads\\New folder\\CoinVista\\CoinVista\\CoinVista.csproj",
         "projectName": "CoinVista",
-        "projectPath": "/Users/lokeshadda/Documents/CourseWork/AppDev/Project/CoinVista/CoinVista/CoinVista.csproj",
-        "packagesPath": "/Users/lokeshadda/.nuget/packages/",
-        "outputPath": "/Users/lokeshadda/Documents/CourseWork/AppDev/Project/CoinVista/CoinVista/obj/",
+        "projectPath": "C:\\Users\\karth\\Downloads\\New folder\\CoinVista\\CoinVista\\CoinVista.csproj",
+        "packagesPath": "C:\\Users\\karth\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\karth\\Downloads\\New folder\\CoinVista\\CoinVista\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/lokeshadda/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\karth\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -36,9 +36,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net9.0": {
@@ -94,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
